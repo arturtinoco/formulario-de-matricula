@@ -16,6 +16,7 @@ label + .radio-wrapper {
     border: 1px solid var(--stroke-default);
     border-radius: .5rem;
     padding: 2rem .5rem .5rem;
+    animation: border-hover-fade-out .3s ease-out backwards;
 
     & input,
     & input:focus,
@@ -32,21 +33,27 @@ label + .radio-wrapper {
         height: 1.5rem;
         top: .5rem;
         left: .5rem;
+        animation: radio-hover-fade-out .3s ease-out backwards;
     }
 
     &:hover, &:focus-within {
-        border: 1px solid var(--stroke-highlight);
+        /*border: 1px solid var(--stroke-highlight);*/
+        animation: border-hover-fade-in .3s ease-in forwards;
 
         & .radio-image {
             background-image: url(../../assets/icons/radio-hover.svg);
+            animation: radio-hover-fade-in .3s forwards;
         }
+        
     }
 
     &:has(:checked) {
         border: 2px solid var(--stroke-highlight);
+        animation: radio-hover-fade-in .3s ease-in forwards;
 
         & .radio-image {
             background-image: url(../../assets/icons/radio-checked.svg);
+            animation: radio-checked-fade-in .2s ease-in forwards;
         }
     }
 }

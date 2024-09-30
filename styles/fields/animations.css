@@ -1,0 +1,83 @@
+@keyframes bg-hover-fade-in {
+    from {
+        background-color: #fee7d600;
+        border-color: transparent;
+    } to {
+        background-color: #fee7d6;
+        border-color: #F3541C;
+    }
+}
+
+@keyframes bg-hover-fade-out {
+    from {
+        background-color: #fee7d6;
+        border-color: #F3541C;
+    } to {        
+        background-color: #fee7d600;
+        border-color: transparent;
+    }
+}
+
+@keyframes svg-hover-fade-in {
+    from {
+        stroke: var(--stroke-default);
+    } to {
+        stroke: var(--stroke-highlight);
+    }
+}
+
+@keyframes svg-hover-fade-out {
+    from {
+        stroke: var(--stroke-highlight);
+    } to {
+        stroke: var(--stroke-default);
+    }
+}
+
+@keyframes border-hover-fade-in {
+    from {
+        border-color: var(--stroke-default);
+    } to {
+        border-color: var(--stroke-highlight);
+    }
+}
+
+@keyframes border-hover-fade-out {
+    from {
+        border-color: var(--stroke-highlight);
+    } to {
+        border-color: var(--stroke-default);
+    }
+}
+
+@keyframes radio-hover-fade-in {
+    from {
+        opacity: 70%;
+    } to {
+        opacity: 100%;
+    }
+}
+
+@keyframes radio-hover-fade-out {
+    from {
+        opacity: 100%;
+    } to {
+        opacity: 70%;
+    }
+}
+
+@keyframes radio-checked-fade-in {
+    from {
+        opacity: 20%;
+    } to {
+        opacity: 100%;
+    }
+}
+
+@keyframes radio-checked-fade-out {
+    from {
+        opacity: 100%;
+    } to {
+        opacity: 20%;
+    }
+}

@@ -88,3 +88,12 @@ input {
         display: none;
     }
 }
+
+@media (width < 80rem) {
+    & .address {
+
+        &:nth-child(2) div {
+            flex-direction: column;
+        }
+    }
+}

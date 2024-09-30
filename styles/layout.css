@@ -49,3 +49,45 @@ aside {
         }
     }
 }
+
+@media (width < 80em) {
+    & #app {
+        grid-template-columns: none;
+        overflow: scroll;
+    }
+
+    & main {
+        overflow: unset;
+        order: 2;
+        padding: 1.5rem;
+        margin-inline: auto;
+
+        & .main-container {
+            display: grid;
+        }
+    }
+
+    & aside {
+        order: 1;
+        padding: 1.5rem;
+
+        & .aside-container {
+            margin-inline: auto;
+
+            & header {
+                width: fit-content;
+                margin-inline: auto;
+            }
+    
+            & > img {
+                min-width: 19.5rem;
+                margin-top: .75rem;
+            }
+        }
+
+        & h2,
+        & p {
+            display: none;
+        }
+    }
+}

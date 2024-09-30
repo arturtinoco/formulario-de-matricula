@@ -8,6 +8,8 @@
     border-radius: .25rem;
     outline: 1px dashed var(--stroke-default);
     padding: 1.75rem 1rem;
+    animation: bg-hover-fade-out .3s ease-out backwards;
+    
 
     & input {
         position: absolute;
@@ -21,17 +23,20 @@
         color: #A8A29E;
     }
 
+    & svg path:not(:hover) {
+        animation: svg-hover-fade-out .3s ease-out backwards;
+    }
+
     &:hover, &:has(input:focus) {
         outline-width: 0;
-        background-color: var(--surface-secondary);
-        border-color: var(--stroke-highlight);
+        animation: bg-hover-fade-in .3s ease-in forwards;
 
         & p {
             color: var(--text-tertiary);
         }
 
         & svg path {
-            stroke: var(--stroke-highlight);
+            animation: svg-hover-fade-in .3s ease-in forwards;
         }
     }
 }
